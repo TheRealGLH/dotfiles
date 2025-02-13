@@ -53,7 +53,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-export BROWSER=wslview
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 setopt IGNORE_EOF
