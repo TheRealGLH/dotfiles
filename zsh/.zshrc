@@ -24,6 +24,10 @@ zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
+#Hack for MacOS
+if ! type "dircolors" > /dev/null; then
+    alias dircolors=gdircolors
+fi
 eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
@@ -40,10 +44,10 @@ alias nvi="nvim --noplugins"
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:/opt/nvim-linux64/bin:~/.local/bin:/snap/bin:/home/martijn/.cargo/bin/"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:/opt/nvim-linux64/bin:~/.local/bin:/snap/bin:~/.cargo/bin/:/opt/homebrew/bin:$PATH"
 eval "$(oh-my-posh init zsh --config ~/dracula-modified.omp.json)"
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
+if [[ (-x /usr/bin/dircolors) || (-x /opt/homebrew/bin/gdircolors) ]]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
