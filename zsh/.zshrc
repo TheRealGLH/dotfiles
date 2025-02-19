@@ -57,6 +57,10 @@ if [[ (-x /usr/bin/dircolors) || (-x /opt/homebrew/bin/gdircolors) ]]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+alias watch='watch '
+alias dps='docker ps --format "table {{.Names}}\t{{.ID}}\t{{.Command}}\t{{.CreatedAt}}"'
+alias dpsa='docker ps --format "table {{.Names}}\t{{.ID}}\t{{.Image}}\\t{{.Command}}\t{{.CreatedAt}}\t{{.Status}}" -a'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 setopt IGNORE_EOF
