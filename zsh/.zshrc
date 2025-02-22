@@ -1,3 +1,6 @@
+#Delete word bash style
+autoload -U select-word-style
+select-word-style bash
 # Set up the prompt
 
 autoload -Uz promptinit
