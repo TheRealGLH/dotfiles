@@ -30,7 +30,7 @@
   },
   "transient_prompt": {
     "template": " \uf4b5  ",
-    "foreground": "p:fg",
+    "foreground": "p:white",
     "background": "transparent"
   },
   "blocks": [
