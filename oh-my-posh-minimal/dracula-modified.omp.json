@@ -129,16 +129,17 @@
             "cache_duration": "none",
             "fetch_stash_count": true,
             "fetch_status": false,
-            "fetch_upstream_icon": true
+            "fetch_upstream_icon": true,
+            "github_icon": "\ueb00 "
           },
           "foreground": "p:yellow",
           "background": "transparent",
           "trailing_diamond": "\ue0b0",
           "type": "git",
-          "style": "diamond",
+          "style": "plain",
           "templates": [
             "{{ if ne .Dir .PWD }} \uf401 {{ .RepoName }}{{end}}",
-            " \ue725 ({{ url .UpstreamIcon .UpstreamURL}} {{ url .HEAD .UpstreamURL }}",
+            " \ue725 ({{ .UpstreamIcon }}{{ url .HEAD .UpstreamURL }}",
             "{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}) "
           ]
         },
