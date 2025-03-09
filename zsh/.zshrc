@@ -69,3 +69,11 @@ export NVM_DIR="$HOME/.nvm"
 setopt IGNORE_EOF
 unsetopt ignoreeof
 setopt ignore_eof
+
+# pnpm
+export PNPM_HOME="/Users/martijndaniels/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
