@@ -85,5 +85,8 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
   --color=border:#262626,label:#aeaeae,query:#d9d9d9
   --border="bold" --border-label="" --preview-window="border-sharp" --prompt="> "
-  --marker=">" --pointer="" --separator="─" --scrollbar="│"
+  --marker=">" --pointer=" " --separator="─" --scrollbar="│"
   --layout="reverse-list" --info="right"'
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
