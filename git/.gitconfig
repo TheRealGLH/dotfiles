@@ -1,0 +1,16 @@
+[init]
+    defaultBranch = main
+[commit]
+    gpgsign = true
+# This is Git's per-user configuration file.
+[user]
+	name = TheRealGLH
+	email = TheRealGLH@users.noreply.github.com
+[includeIf "gitdir:~/Code/Personal/"]
+    path = "~/.gitconfig.personal"
+[includeIf "gitdir:~/dotfiles/"]
+    path = "~/.gitconfig.personal"
+[includeIf "gitdir:~/.config/nvim/"]
+    path = "~/.gitconfig.personal"
+[includeIf "gitdir:~/Code/Horizon/"]
+    path = "~/.gitconfig.horizon"
