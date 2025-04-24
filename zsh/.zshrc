@@ -70,14 +70,11 @@ setopt IGNORE_EOF
 unsetopt ignoreeof
 setopt ignore_eof
 
-# pnpm
-export PNPM_HOME="/Users/martijndaniels/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
+# Load seperated config files
+for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
+  source "${conf}"
+done
+unset conf
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=fg:#d0d0d0,fg+:#d0d0d0,bg:-1,bg+:#262626
