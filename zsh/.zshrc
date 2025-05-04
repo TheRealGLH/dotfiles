@@ -76,6 +76,12 @@ for conf in "$HOME/.config/zsh/config.d/"*.zsh; do
 done
 unset conf
 
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=fg:#d0d0d0,fg+:#d0d0d0,bg:-1,bg+:#262626
   --color=hl:#5f87af,hl+:#5fd7ff,info:#afaf87,marker:#87ff00
@@ -85,5 +91,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --marker=">" --pointer=" " --separator="─" --scrollbar="│"
   --layout="reverse-list" --info="right"'
 
+zinit light Aloxaf/fzf-tab
+# NOTE: This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:*' fzf-pad 4
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
