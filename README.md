@@ -49,3 +49,13 @@ fastfetch 2.32.1 (aarch64)
 oh-my-posh --version
 24.11.4
 ```
+
+### ZSH and FZF
+```sh
+zsh --version
+zsh 5.9 (arm64-apple-darwin24.0)
+```
+```sh
+fzf --version
+0.61.1 (brew)
+```
