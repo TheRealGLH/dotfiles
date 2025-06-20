@@ -2,6 +2,8 @@
     defaultBranch = main
 [commit]
     gpgsign = true
+[tag]
+    gpgsign = true
 # This is Git's per-user configuration file.
 [user]
 	name = TheRealGLH
