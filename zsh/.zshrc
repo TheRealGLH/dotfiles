@@ -81,6 +81,8 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
+#GPG config
+export GPG_TTY=$(tty)
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=fg:#d0d0d0,fg+:#d0d0d0,bg:-1,bg+:#262626
