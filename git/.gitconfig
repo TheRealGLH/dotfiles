@@ -12,6 +12,8 @@
     path = "~/.gitconfig.personal"
 [includeIf "gitdir:~/dotfiles/"]
     path = "~/.gitconfig.personal"
+[includeIf "gitdir:~/Code/School"]
+    path = "~/.gitconfig.personal"
 [includeIf "gitdir:~/.config/nvim/"]
     path = "~/.gitconfig.personal"
 [includeIf "gitdir:~/Code/Horizon/"]
