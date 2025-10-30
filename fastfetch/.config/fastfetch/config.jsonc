@@ -30,27 +30,114 @@
     "title",
     {
       "type": "separator",
-      "string": "⎯",
+      "string": " ",
     },
-    "os",
-    "host",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "wmtheme",
-    "theme",
-    "icons",
-    "font",
-    "cursor",
-    "terminal",
-    "cpu",
-    "gpu",
-    "memory",
-    "disk",
-    "localip",
+    {
+      "type": "os",
+      "key": "╭─ ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "kernel",
+      "key": "├─ ",
+      "format": "{1} {2}",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "packages",
+      "key": "├─󰮯 ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "de",
+      "key": "├─ ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "wm",
+      "key": "├─ ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "lm",
+      "key": "├─󰧨 ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "theme",
+      "key": "├─󰉼 ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "font",
+      "key": "├─\uf031",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "cursor",
+      "key": "├─ ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "icons",
+      "key": "╰─󰀻 ",
+      "keyColor": "magenta",
+    },
+    "break",
+
+    {
+      "type": "terminal",
+      "key": "╭─ ",
+      "keyColor": "green",
+    },
+    {
+      "type": "terminalfont",
+      "key": "├─ ",
+      "keyColor": "green",
+    },
+    {
+      "type": "shell",
+      "key": "╰─ ",
+      "keyColor": "green",
+    },
+
+    "break",
+
+    {
+      "type": "host",
+      "key": "╭─ ",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "cpu",
+      "key": "├─󰍛 ",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "gpu",
+      "key": "├─󰘚 ",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "display",
+      "key": "├─󰍹 ",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "disk",
+      "key": "├─󰋊 ",
+      "keyColor": "yellow",
+      "format": "{size-percentage-bar} ({mountpoint}) {size-free}/{size-total} ({size-percentage})"
+    },
+    {
+      "type": "memory",
+      "key": "├─󰑭 ",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "uptime",
+      "key": "╰─󰅐 ",
+      "keyColor": "yellow",
+    },
   ],
 }
