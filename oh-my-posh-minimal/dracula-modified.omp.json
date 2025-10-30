@@ -29,7 +29,7 @@
     "yellow": "#F1FA8C"
   },
   "transient_prompt": {
-    "template": " \uf4b5  ",
+    "template": " ~> ",
     "foreground": "p:white",
     "background": "transparent"
   },
@@ -223,7 +223,7 @@
           },
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b0",
-          "template": " \uf4b5 ",
+          "template": " ~>",
           "foreground": "p:fg",
           "type": "text",
           "style": "plain"
@@ -236,11 +236,12 @@
     {
       "properties": {
         "fetch_status": true,
-        "fetch_upstream_icon": true
+        "fetch_upstream_icon": true,
+        "branch_icon": "\uE0A0 "
       },
       "leading_diamond": "\ue0b6",
       "trailing_diamond": "\ue0b4",
-      "template": "{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}",
+      "template": "{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}",
       "foreground": "p:yellow",
       "background": "transparent",
       "type": "git",
@@ -254,7 +255,7 @@
       "style": "diamond",
       "foreground": "p:pink",
       "background": "transparent",
-      "tips": ["node", "cargo", "dotnet"]
+      "tips": ["node", "cargo", "dotnet", "pnpm"]
     }
   ],
   "version": 3,
