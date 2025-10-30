@@ -47,7 +47,7 @@ alias nvi="nvim --noplugins"
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:/opt/nvim-linux64/bin:~/.local/bin:/snap/bin:/home/martijn/.cargo/bin:/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/games:/opt/nvim-linux64/bin:/home/martijn/.local/bin:/home/martijn/bin:/snap/bin:/home/martijn/.cargo/bin:/opt/homebrew/bin:$PATH"
 eval "$(oh-my-posh init zsh --config ~/dracula-modified.omp.json)"
 # enable color support of ls and also add handy aliases
 if [[ (-x /usr/bin/dircolors) || (-x /opt/homebrew/bin/gdircolors) ]]; then
