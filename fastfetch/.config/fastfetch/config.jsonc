@@ -70,7 +70,7 @@
     },
     {
       "type": "font",
-      "key": "├─\uf031",
+      "key": "├─\uf031 ",
       "keyColor": "magenta",
     },
     {
@@ -104,8 +104,13 @@
     "break",
 
     {
+      "type": "localip",
+      "key": "╭─󰛳 ",
+      "keyColor": "yellow",
+    },
+    {
       "type": "host",
-      "key": "╭─ ",
+      "key": "├─ ",
       "keyColor": "yellow",
     },
     {
@@ -127,7 +132,7 @@
       "type": "disk",
       "key": "├─󰋊 ",
       "keyColor": "yellow",
-      "format": "{size-percentage-bar} ({mountpoint}) {size-free}/{size-total} ({size-percentage})"
+      "format": "{size-percentage-bar} ({name}) {size-free}/{size-total} ({size-percentage})"
     },
     {
       "type": "memory",
