@@ -100,4 +100,3 @@ zstyle ':fzf-tab:*' fzf-pad 4
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
