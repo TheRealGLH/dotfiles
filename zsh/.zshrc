@@ -85,14 +85,25 @@ source "${ZINIT_HOME}/zinit.zsh"
 export GPG_TTY=$(tty)
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-  --color=fg:#d0d0d0,fg+:#d0d0d0,bg:-1,bg+:#262626
-  --color=hl:#5f87af,hl+:#5fd7ff,info:#afaf87,marker:#87ff00
-  --color=prompt:#d7005f,spinner:#af5fff,pointer:#af5fff,header:#87afaf
-  --color=border:#262626,label:#aeaeae,query:#d9d9d9
-  --border="bold" --border-label="" --preview-window="border-sharp" --prompt="> "
+  --color=fg:white,fg+:#d0d0d0,bg:-1,bg+:#44475A
+  --color=hl:#6272A4,hl+:#6272A4,info:#FFB86C,marker:green
+  --color=prompt:#BD93F9,spinner:#af5fff,pointer:#BD93F9,header:red
+  --color=border:#6272A4,label:#6272A4,query:#F8F8F2
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
   --marker=">" --pointer=" " --separator="─" --scrollbar="│"
   --layout="reverse-list" --info="right"'
 
+# For Ctrl+T file search widget
+export FZF_CTRL_T_OPTS="--preview 'cat -n {}'"
+
+# For fzf-tab completions (uses $realpath instead of {})
+zstyle ':fzf-tab:complete:*:*' fzf-preview '~/fzf-preview.sh $realpath $word'
+
+_fzf_comprun() {
+    local command=$1
+    shift
+    fzf --preview '~/fzf-preview.sh {}' "$@"
+}
 zinit light Aloxaf/fzf-tab
 # NOTE: This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
