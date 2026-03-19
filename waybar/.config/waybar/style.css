@@ -1,17 +1,43 @@
 @import url("./colors.css");
-* {
-    border: none;
-    border-radius: 0;
-    font-family: Iosevka;
-    font-size: 11pt;
-    min-height: 0;
+
+#window {
+  background: none;
 }
+.modules-right #cpu, .modules-right #pulseaudio, .modules-right #memory {
+	background-color: @selection;
+}
+
+.modules-right #pulseaudio, .modules-right #keyboard-state{
+	padding-left: 24px;
+	border-radius: 90px 0px 0px 90px;
+}
+.modules-right #memory, .modules-right #bluetooth{
+	padding-right: 24px;
+	border-radius: 0px 90px 90px 0px;
+  margin-right: 1em;
+}
+
+.modules-right #custom-power {
+  background-color: @red;
+  color: @background-darker;
+  border-radius: 90px;
+  padding: 0px 0.5em;
+
+}
+
+.modules-right #keyboard-state , .modules-right #bluetooth, .modules-right #battery{
+	background-color: @yellow;
+  color: @background-darker;
+}
+
 window#waybar {
     opacity: 0.9;
     background: @background-darker;
     color: @foreground;
     border-bottom: 2px solid @background;
+    font-size: 14pt;
 }
+
 #workspaces button {
     padding: 0 10px;
     background: @background;
@@ -29,12 +55,16 @@ window#waybar {
 #workspaces button.urgent {
     background-image: linear-gradient(0deg, @red, @background-darker);
 }
+
+#taskbar button image {
+ /* min-height: 40px;*/
+}
 #taskbar button.active {
-    background-image: linear-gradient(0deg, @selection, @background-darker);
+    background-image: linear-gradient(0deg, @comment, @background-darker);
 }
 #clock {
     padding: 0 4px;
-    background: @background;
+    /*background: @background;*/
 }
 
 #keyboard-state {
