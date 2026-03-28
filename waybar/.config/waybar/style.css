@@ -19,11 +19,21 @@
 
 .modules-right #custom-power {
   background-color: @red;
+  margin-right: 1em;
   color: @background-darker;
   border-radius: 90px;
   padding: 0px 0.5em;
-
+	transition: background-image linear 0.1s;
 }
+
+.modules-right #tray {
+  margin-right: 1em;
+}
+
+.modules-right #custom-power:hover {
+	background-image: linear-gradient(0deg, @foreground, @red);
+}
+
 
 .modules-right #keyboard-state , .modules-right #bluetooth, .modules-right #battery{
 	background-color: @yellow;
@@ -32,15 +42,16 @@
 
 window#waybar {
     opacity: 0.9;
-    background: @background-darker;
+    background-image: linear-gradient(0deg, @background-darker-0, @background-darker);
+  background-color: @background-darker-0;
+    padding: 0.2em;
     color: @foreground;
-    border-bottom: 2px solid @background;
     font-size: 14pt;
 }
 
 #workspaces button {
     padding: 0 10px;
-    background: @background;
+    background: @background-darker-0;
     color: @foreground;
 }
 #workspaces button:hover {
@@ -50,7 +61,8 @@ window#waybar {
 }
 #workspaces button.focused,
 #workspaces button.active {
-    background-image: linear-gradient(0deg, @purple, @selection);
+    background-image: linear-gradient(0deg, @purple, @background-darker-30);
+    border-bottom: 2px solid @purple;
 }
 #workspaces button.urgent {
     background-image: linear-gradient(0deg, @red, @background-darker);
@@ -60,7 +72,8 @@ window#waybar {
  /* min-height: 40px;*/
 }
 #taskbar button.active {
-    background-image: linear-gradient(0deg, @comment, @background-darker);
+    /*background-image: linear-gradient(0deg, @comment, @background-darker);*/
+    border-bottom: 2px solid @orange;
 }
 #clock {
     padding: 0 4px;
