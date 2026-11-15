@@ -59,3 +59,10 @@ zsh 5.9 (arm64-apple-darwin24.0)
 fzf --version
 0.61.1 (brew)
 ```
+
+### Claude Code
+
+`~/.claude/skills` must be a real directory (not a folded stow symlink), because Claude Code writes account-synced skills to `~/.claude/skills/synced`. Create it before stowing:
+```sh
+mkdir -p ~/.claude/skills && stow claude
+```

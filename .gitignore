@@ -36,3 +36,6 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
 
+
+# Claude Code account-synced skills (managed by Claude, live in ~/.claude/skills/synced)
+claude/.claude/skills/synced/
